@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.awt.EventQueue;
 import java.util.Arrays;
 
 public class ShipRunner {
@@ -32,6 +33,7 @@ public class ShipRunner {
 		Player p1 = new Player(1, p1ships);
 		Player p2 = new Player(2, p2ships);
       
+		
       String[] q = {"1+2=","2+2=","3+2=","4+2="};
       String[] a = {"3","4","5","6"};
       Quiz addition = new Quiz(q,a);
