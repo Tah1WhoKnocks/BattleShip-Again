@@ -1,10 +1,28 @@
 import java.util.Scanner;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.GridLayout;
+import javax.swing.JLabel;
+import net.miginfocom.swing.MigLayout;
+
 import java.awt.EventQueue;
 import java.util.Arrays;
 
 public class ShipRunner {
 	public static void main(String[]args)
 	{
+
+		
+		MainWindow window = new MainWindow();
+		window.frame.setVisible(true);
+		
+					
+		
 		Scanner scan = new Scanner(System.in);
 		int winner = 0;
 		int turn = ((int)Math.random()+1 *2);
