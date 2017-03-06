@@ -96,7 +96,6 @@ public class MainWindow {
 		frame.getContentPane().add(lblPlayer);
 		
 		JButton btnA = new JButton("A1");
-		btnA.setBackground(new Color(255, 255, 255));
 		btnA.setBounds(50, 96, 70, 60);
 		frame.getContentPane().add(btnA);
 		
@@ -297,5 +296,203 @@ public class MainWindow {
 		JButton btnF_4 = new JButton("F6");
 		btnF_4.setBounds(550, 597, 70, 60);
 		frame.getContentPane().add(btnF_4);
+		
+		JButton button = new JButton("A1");
+		button.setBounds(700, 96, 70, 60);
+		frame.getContentPane().add(button);
+		
+		JButton button_1 = new JButton("A2");
+		button_1.setBounds(800, 96, 70, 60);
+		frame.getContentPane().add(button_1);
+		
+		JButton button_2 = new JButton("A3");
+		button_2.setBounds(900, 96, 70, 60);
+		frame.getContentPane().add(button_2);
+		
+		JButton button_3 = new JButton("A4");
+		button_3.setBounds(1000, 96, 70, 60);
+		frame.getContentPane().add(button_3);
+		
+		JButton button_4 = new JButton("A5");
+		button_4.setBounds(1100, 96, 70, 60);
+		frame.getContentPane().add(button_4);
+		
+		JButton button_5 = new JButton("A6");
+		button_5.setBounds(1200, 96, 70, 60);
+		frame.getContentPane().add(button_5);
+		
+		JButton button_6 = new JButton("B1");
+		button_6.setBounds(700, 197, 70, 60);
+		frame.getContentPane().add(button_6);
+		
+		JButton button_7 = new JButton("B2");
+		button_7.setBounds(800, 197, 70, 60);
+		frame.getContentPane().add(button_7);
+		
+		JButton button_8 = new JButton("B3");
+		button_8.setBounds(900, 197, 70, 60);
+		frame.getContentPane().add(button_8);
+		
+		JButton button_9 = new JButton("B4");
+		button_9.setBounds(1000, 197, 70, 60);
+		frame.getContentPane().add(button_9);
+		
+		JButton button_10 = new JButton("B5");
+		button_10.setBounds(1100, 197, 70, 60);
+		frame.getContentPane().add(button_10);
+		
+		JButton button_11 = new JButton("B6");
+		button_11.setBounds(1200, 197, 70, 60);
+		frame.getContentPane().add(button_11);
+		
+		JButton button_12 = new JButton("C1");
+		button_12.setBounds(700, 297, 70, 60);
+		frame.getContentPane().add(button_12);
+		
+		JButton button_13 = new JButton("C2");
+		button_13.setBounds(800, 297, 70, 60);
+		frame.getContentPane().add(button_13);
+		
+		JButton button_14 = new JButton("C3");
+		button_14.setBounds(900, 297, 70, 60);
+		frame.getContentPane().add(button_14);
+		
+		JButton button_15 = new JButton("C4");
+		button_15.setBounds(1000, 297, 70, 60);
+		frame.getContentPane().add(button_15);
+		
+		JButton button_16 = new JButton("C5");
+		button_16.setBounds(1100, 297, 70, 60);
+		frame.getContentPane().add(button_16);
+		
+		JButton button_17 = new JButton("C6");
+		button_17.setBounds(1200, 297, 70, 60);
+		frame.getContentPane().add(button_17);
+		
+		JButton button_18 = new JButton("D1");
+		button_18.setBounds(700, 397, 70, 60);
+		frame.getContentPane().add(button_18);
+		
+		JButton button_19 = new JButton("D2");
+		button_19.setBounds(800, 397, 70, 60);
+		frame.getContentPane().add(button_19);
+		
+		JButton button_20 = new JButton("D3");
+		button_20.setBounds(900, 397, 70, 60);
+		frame.getContentPane().add(button_20);
+		
+		JButton button_21 = new JButton("D4");
+		button_21.setBounds(1000, 397, 70, 60);
+		frame.getContentPane().add(button_21);
+		
+		JButton button_22 = new JButton("D5");
+		button_22.setBounds(1100, 397, 70, 60);
+		frame.getContentPane().add(button_22);
+		
+		JButton button_23 = new JButton("D6");
+		button_23.setBounds(1200, 397, 70, 60);
+		frame.getContentPane().add(button_23);
+		
+		JButton button_24 = new JButton("E1");
+		button_24.setBounds(700, 497, 70, 60);
+		frame.getContentPane().add(button_24);
+		
+		JButton button_25 = new JButton("E2");
+		button_25.setBounds(800, 497, 70, 60);
+		frame.getContentPane().add(button_25);
+		
+		JButton button_26 = new JButton("E3");
+		button_26.setBounds(900, 497, 70, 60);
+		frame.getContentPane().add(button_26);
+		
+		JButton button_27 = new JButton("E4");
+		button_27.setBounds(1000, 497, 70, 60);
+		frame.getContentPane().add(button_27);
+		
+		JButton button_28 = new JButton("E5");
+		button_28.setBounds(1100, 497, 70, 60);
+		frame.getContentPane().add(button_28);
+		
+		JButton button_29 = new JButton("E6");
+		button_29.setBounds(1200, 497, 70, 60);
+		frame.getContentPane().add(button_29);
+		
+		JButton button_30 = new JButton("F1");
+		button_30.setBounds(700, 597, 70, 60);
+		frame.getContentPane().add(button_30);
+		
+		JButton button_31 = new JButton("F2");
+		button_31.setBounds(800, 597, 70, 60);
+		frame.getContentPane().add(button_31);
+		
+		JButton button_32 = new JButton("F3");
+		button_32.setBounds(900, 597, 70, 60);
+		frame.getContentPane().add(button_32);
+		
+		JButton button_33 = new JButton("F4");
+		button_33.setBounds(1000, 597, 70, 60);
+		frame.getContentPane().add(button_33);
+		
+		JButton button_34 = new JButton("F5");
+		button_34.setBounds(1100, 597, 70, 60);
+		frame.getContentPane().add(button_34);
+		
+		JButton button_35 = new JButton("F6");
+		button_35.setBounds(1200, 597, 70, 60);
+		frame.getContentPane().add(button_35);
+		
+		JLabel label_6 = new JLabel("A");
+		label_6.setBounds(668, 119, 46, 14);
+		frame.getContentPane().add(label_6);
+		
+		JLabel label_7 = new JLabel("B");
+		label_7.setBounds(668, 220, 46, 14);
+		frame.getContentPane().add(label_7);
+		
+		JLabel label_8 = new JLabel("C");
+		label_8.setBounds(668, 320, 46, 14);
+		frame.getContentPane().add(label_8);
+		
+		JLabel label_9 = new JLabel("D");
+		label_9.setBounds(668, 420, 46, 14);
+		frame.getContentPane().add(label_9);
+		
+		JLabel label_10 = new JLabel("E");
+		label_10.setBounds(668, 520, 46, 14);
+		frame.getContentPane().add(label_10);
+		
+		JLabel label_11 = new JLabel("F");
+		label_11.setBounds(668, 620, 46, 14);
+		frame.getContentPane().add(label_11);
+		
+		JLabel label_12 = new JLabel("1");
+		label_12.setHorizontalAlignment(SwingConstants.CENTER);
+		label_12.setBounds(700, 62, 46, 14);
+		frame.getContentPane().add(label_12);
+		
+		JLabel label_13 = new JLabel("2");
+		label_13.setHorizontalAlignment(SwingConstants.CENTER);
+		label_13.setBounds(800, 62, 46, 14);
+		frame.getContentPane().add(label_13);
+		
+		JLabel label_14 = new JLabel("3");
+		label_14.setHorizontalAlignment(SwingConstants.CENTER);
+		label_14.setBounds(900, 62, 46, 14);
+		frame.getContentPane().add(label_14);
+		
+		JLabel label_15 = new JLabel("4");
+		label_15.setHorizontalAlignment(SwingConstants.CENTER);
+		label_15.setBounds(1000, 62, 46, 14);
+		frame.getContentPane().add(label_15);
+		
+		JLabel label_16 = new JLabel("5");
+		label_16.setHorizontalAlignment(SwingConstants.CENTER);
+		label_16.setBounds(1100, 62, 46, 14);
+		frame.getContentPane().add(label_16);
+		
+		JLabel label_17 = new JLabel("6");
+		label_17.setHorizontalAlignment(SwingConstants.CENTER);
+		label_17.setBounds(1200, 62, 46, 14);
+		frame.getContentPane().add(label_17);
 	}
 }
