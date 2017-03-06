@@ -96,7 +96,7 @@ public class MainWindow {
 		frame.getContentPane().add(lblPlayer);
 		
 		JButton btnA = new JButton("A1");
-		btnA.setBackground(new Color(105, 105, 105));
+		btnA.setBackground(new Color(255, 255, 255));
 		btnA.setBounds(50, 96, 70, 60);
 		frame.getContentPane().add(btnA);
 		
