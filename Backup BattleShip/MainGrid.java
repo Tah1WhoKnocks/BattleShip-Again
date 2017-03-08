@@ -7,6 +7,8 @@ import java.awt.event.ActionEvent;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
 import net.miginfocom.swing.MigLayout;
+import norm.buzzfeed;
+
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.FormSpecs;
@@ -31,12 +33,14 @@ public class MainGrid {
 	String answer;
 	JFrame frame;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
-	private JTextField txtQuestion;
+	private Player self;
+	private Player opponent;
 	
 
 	/**
 	 * Launch the application.
 	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -49,12 +53,14 @@ public class MainGrid {
 			}
 		});
 	}
-
+	
 	/**
 	 * Create the application.
 	 */
 	public MainGrid() {
 		initialize();
+		setSelf(new Player(1));
+		setOpponent(new Player(2));
 	}
 
 	/**
@@ -77,12 +83,6 @@ public class MainGrid {
 		separator_1.setBounds(659, 0, 31, 681);
 		frame.getContentPane().add(separator_1);
 		
-		txtQuestion = new JTextField();
-		txtQuestion.setText("Question");
-		txtQuestion.setBounds(335, 11, 230, 20);
-		frame.getContentPane().add(txtQuestion);
-		txtQuestion.setColumns(10);
-		
 		JLabel lblAttack = new JLabel("Attack!");
 		lblAttack.setBounds(84, 14, 46, 14);
 		frame.getContentPane().add(lblAttack);
@@ -95,29 +95,52 @@ public class MainGrid {
 		lblPlayer.setBounds(682, 14, 46, 14);
 		frame.getContentPane().add(lblPlayer);
 		
-		JButton btnA = new JButton("A1");
-		btnA.setBounds(50, 96, 70, 60);
-		frame.getContentPane().add(btnA);
+		String[] letters = {"A","B","C","D","E","F","G","H","I","J"};
 		
-		JButton btnA_1 = new JButton("A2");
-		btnA_1.setBounds(150, 96, 70, 60);
-		frame.getContentPane().add(btnA_1);
+		JButton[] listThem = new JButton[64];
+		int y = 100;
 		
-		JButton btnA_2 = new JButton("A3");
-		btnA_2.setBounds(250, 96, 70, 60);
-		frame.getContentPane().add(btnA_2);
+		//cleaned up implication of buttons
+		//commented out section is supposed to set button text according to 
+		//getters but I couldn't get it to work.
+		for(int row = 0; row<7; row++){
+			int x = 50;
+			for(int col = 1; col<7; col++){
+				/*if(self.getEnemies()[row][col]==2){
+					listThem[row+col]=new JButton(letters[row]+col);
+					listThem[row+col].setBounds(x,y,70,60);
+					frame.getContentPane().add(listThem[row+col]);
+				}
+				else if(self.getEnemies()[row][col]==1){
+					listThem[row+col]=new JButton("Miss!");
+					listThem[row+col].setBounds(x,y,70,60);
+					frame.getContentPane().add(listThem[row+col]);
+				}
+				else {
+					listThem[row+col]=new JButton("Hit!");
+					listThem[row+col].setBounds(x,y,70,60);
+					frame.getContentPane().add(listThem[row+col]);
+				}*/
+				listThem[row+col]=new JButton(letters[row]+col);
+				listThem[row+col].setBounds(x,y,70,60);
+				frame.getContentPane().add(listThem[row+col]);
+				x+=100;
+			}
+			y += 100;
+		}
 		
-		JButton btnA_3 = new JButton("A4");
-		btnA_3.setBounds(350, 96, 70, 60);
-		frame.getContentPane().add(btnA_3);
-		
-		JButton btnA_4 = new JButton("A5");
-		btnA_4.setBounds(450, 96, 70, 60);
-		frame.getContentPane().add(btnA_4);
-		
-		JButton btnA_5 = new JButton("A6");
-		btnA_5.setBounds(550, 96, 70, 60);
-		frame.getContentPane().add(btnA_5);
+		JButton[] listMe = new JButton[64];
+		int y1 = 100;
+		for(int row = 0; row<7; row++){
+			int x = 710;
+			for(int col = 1; col<7; col++){
+				listMe[row+col]=new JButton(letters[row]+col);
+				listMe[row+col].setBounds(x,y1,70,60);
+				frame.getContentPane().add(listMe[row+col]);
+				x+=100;
+			}
+			y1 += 100;
+		}
 		
 		JLabel lblA = new JLabel("A");
 		lblA.setBounds(10, 120, 46, 14);
@@ -153,50 +176,6 @@ public class MainGrid {
 		label_5.setBounds(550, 62, 46, 14);
 		frame.getContentPane().add(label_5);
 		
-		JButton btnNewButton = new JButton("B1");
-		btnNewButton.setBounds(50, 197, 70, 60);
-		frame.getContentPane().add(btnNewButton);
-		
-		JButton btnNewButton_1 = new JButton("C1");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton_1.setBounds(50, 297, 70, 60);
-		frame.getContentPane().add(btnNewButton_1);
-		
-		JButton btnNewButton_2 = new JButton("D1");
-		btnNewButton_2.setBounds(50, 397, 70, 60);
-		frame.getContentPane().add(btnNewButton_2);
-		
-		JButton btnNewButton_3 = new JButton("E1");
-		btnNewButton_3.setBounds(50, 497, 70, 60);
-		frame.getContentPane().add(btnNewButton_3);
-		
-		JButton btnNewButton_4 = new JButton("F1");
-		btnNewButton_4.setBounds(50, 597, 70, 60);
-		frame.getContentPane().add(btnNewButton_4);
-		
-		JButton btnB = new JButton("B2");
-		btnB.setBounds(150, 197, 70, 60);
-		frame.getContentPane().add(btnB);
-		
-		JButton btnB_1 = new JButton("B3");
-		btnB_1.setBounds(250, 197, 70, 60);
-		frame.getContentPane().add(btnB_1);
-		
-		JButton btnB_2 = new JButton("B4");
-		btnB_2.setBounds(350, 197, 70, 60);
-		frame.getContentPane().add(btnB_2);
-		
-		JButton btnB_3 = new JButton("B5");
-		btnB_3.setBounds(450, 197, 70, 60);
-		frame.getContentPane().add(btnB_3);
-		
-		JButton btnB_4 = new JButton("B6");
-		btnB_4.setBounds(550, 197, 70, 60);
-		frame.getContentPane().add(btnB_4);
-		
 		JLabel lblB = new JLabel("B");
 		lblB.setBounds(10, 220, 46, 14);
 		frame.getContentPane().add(lblB);
@@ -216,230 +195,6 @@ public class MainGrid {
 		JLabel lblF = new JLabel("F");
 		lblF.setBounds(10, 620, 46, 14);
 		frame.getContentPane().add(lblF);
-		
-		JButton btnC = new JButton("C2");
-		btnC.setBounds(150, 297, 70, 60);
-		frame.getContentPane().add(btnC);
-		
-		JButton btnC_1 = new JButton("C3");
-		btnC_1.setBounds(250, 297, 70, 60);
-		frame.getContentPane().add(btnC_1);
-		
-		JButton btnC_2 = new JButton("C4");
-		btnC_2.setBounds(350, 297, 70, 60);
-		frame.getContentPane().add(btnC_2);
-		
-		JButton btnC_3 = new JButton("C5");
-		btnC_3.setBounds(450, 297, 70, 60);
-		frame.getContentPane().add(btnC_3);
-		
-		JButton btnC_4 = new JButton("C6");
-		btnC_4.setBounds(550, 297, 70, 60);
-		frame.getContentPane().add(btnC_4);
-		
-		JButton btnD = new JButton("D2");
-		btnD.setBounds(150, 397, 70, 60);
-		frame.getContentPane().add(btnD);
-		
-		JButton btnD_1 = new JButton("D3");
-		btnD_1.setBounds(250, 397, 70, 60);
-		frame.getContentPane().add(btnD_1);
-		
-		JButton btnD_2 = new JButton("D4");
-		btnD_2.setBounds(350, 397, 70, 60);
-		frame.getContentPane().add(btnD_2);
-		
-		JButton btnD_3 = new JButton("D5");
-		btnD_3.setBounds(450, 397, 70, 60);
-		frame.getContentPane().add(btnD_3);
-		
-		JButton btnD_4 = new JButton("D6");
-		btnD_4.setBounds(550, 397, 70, 60);
-		frame.getContentPane().add(btnD_4);
-		
-		JButton btnE = new JButton("E2");
-		btnE.setBounds(150, 497, 70, 60);
-		frame.getContentPane().add(btnE);
-		
-		JButton btnE_1 = new JButton("E3");
-		btnE_1.setBounds(250, 497, 70, 60);
-		frame.getContentPane().add(btnE_1);
-		
-		JButton btnE_2 = new JButton("E4");
-		btnE_2.setBounds(350, 497, 70, 60);
-		frame.getContentPane().add(btnE_2);
-		
-		JButton btnE_3 = new JButton("E5");
-		btnE_3.setBounds(450, 497, 70, 60);
-		frame.getContentPane().add(btnE_3);
-		
-		JButton btnE_4 = new JButton("E6");
-		btnE_4.setBounds(550, 497, 70, 60);
-		frame.getContentPane().add(btnE_4);
-		
-		JButton btnF = new JButton("F2");
-		btnF.setBounds(150, 597, 70, 60);
-		frame.getContentPane().add(btnF);
-		
-		JButton btnF_1 = new JButton("F3");
-		btnF_1.setBounds(250, 597, 70, 60);
-		frame.getContentPane().add(btnF_1);
-		
-		JButton btnF_2 = new JButton("F4");
-		btnF_2.setBounds(350, 597, 70, 60);
-		frame.getContentPane().add(btnF_2);
-		
-		JButton btnF_3 = new JButton("F5");
-		btnF_3.setBounds(450, 597, 70, 60);
-		frame.getContentPane().add(btnF_3);
-		
-		JButton btnF_4 = new JButton("F6");
-		btnF_4.setBounds(550, 597, 70, 60);
-		frame.getContentPane().add(btnF_4);
-		
-		JButton button = new JButton("A1");
-		button.setBounds(700, 96, 70, 60);
-		frame.getContentPane().add(button);
-		
-		JButton button_1 = new JButton("A2");
-		button_1.setBounds(800, 96, 70, 60);
-		frame.getContentPane().add(button_1);
-		
-		JButton button_2 = new JButton("A3");
-		button_2.setBounds(900, 96, 70, 60);
-		frame.getContentPane().add(button_2);
-		
-		JButton button_3 = new JButton("A4");
-		button_3.setBounds(1000, 96, 70, 60);
-		frame.getContentPane().add(button_3);
-		
-		JButton button_4 = new JButton("A5");
-		button_4.setBounds(1100, 96, 70, 60);
-		frame.getContentPane().add(button_4);
-		
-		JButton button_5 = new JButton("A6");
-		button_5.setBounds(1200, 96, 70, 60);
-		frame.getContentPane().add(button_5);
-		
-		JButton button_6 = new JButton("B1");
-		button_6.setBounds(700, 197, 70, 60);
-		frame.getContentPane().add(button_6);
-		
-		JButton button_7 = new JButton("B2");
-		button_7.setBounds(800, 197, 70, 60);
-		frame.getContentPane().add(button_7);
-		
-		JButton button_8 = new JButton("B3");
-		button_8.setBounds(900, 197, 70, 60);
-		frame.getContentPane().add(button_8);
-		
-		JButton button_9 = new JButton("B4");
-		button_9.setBounds(1000, 197, 70, 60);
-		frame.getContentPane().add(button_9);
-		
-		JButton button_10 = new JButton("B5");
-		button_10.setBounds(1100, 197, 70, 60);
-		frame.getContentPane().add(button_10);
-		
-		JButton button_11 = new JButton("B6");
-		button_11.setBounds(1200, 197, 70, 60);
-		frame.getContentPane().add(button_11);
-		
-		JButton button_12 = new JButton("C1");
-		button_12.setBounds(700, 297, 70, 60);
-		frame.getContentPane().add(button_12);
-		
-		JButton button_13 = new JButton("C2");
-		button_13.setBounds(800, 297, 70, 60);
-		frame.getContentPane().add(button_13);
-		
-		JButton button_14 = new JButton("C3");
-		button_14.setBounds(900, 297, 70, 60);
-		frame.getContentPane().add(button_14);
-		
-		JButton button_15 = new JButton("C4");
-		button_15.setBounds(1000, 297, 70, 60);
-		frame.getContentPane().add(button_15);
-		
-		JButton button_16 = new JButton("C5");
-		button_16.setBounds(1100, 297, 70, 60);
-		frame.getContentPane().add(button_16);
-		
-		JButton button_17 = new JButton("C6");
-		button_17.setBounds(1200, 297, 70, 60);
-		frame.getContentPane().add(button_17);
-		
-		JButton button_18 = new JButton("D1");
-		button_18.setBounds(700, 397, 70, 60);
-		frame.getContentPane().add(button_18);
-		
-		JButton button_19 = new JButton("D2");
-		button_19.setBounds(800, 397, 70, 60);
-		frame.getContentPane().add(button_19);
-		
-		JButton button_20 = new JButton("D3");
-		button_20.setBounds(900, 397, 70, 60);
-		frame.getContentPane().add(button_20);
-		
-		JButton button_21 = new JButton("D4");
-		button_21.setBounds(1000, 397, 70, 60);
-		frame.getContentPane().add(button_21);
-		
-		JButton button_22 = new JButton("D5");
-		button_22.setBounds(1100, 397, 70, 60);
-		frame.getContentPane().add(button_22);
-		
-		JButton button_23 = new JButton("D6");
-		button_23.setBounds(1200, 397, 70, 60);
-		frame.getContentPane().add(button_23);
-		
-		JButton button_24 = new JButton("E1");
-		button_24.setBounds(700, 497, 70, 60);
-		frame.getContentPane().add(button_24);
-		
-		JButton button_25 = new JButton("E2");
-		button_25.setBounds(800, 497, 70, 60);
-		frame.getContentPane().add(button_25);
-		
-		JButton button_26 = new JButton("E3");
-		button_26.setBounds(900, 497, 70, 60);
-		frame.getContentPane().add(button_26);
-		
-		JButton button_27 = new JButton("E4");
-		button_27.setBounds(1000, 497, 70, 60);
-		frame.getContentPane().add(button_27);
-		
-		JButton button_28 = new JButton("E5");
-		button_28.setBounds(1100, 497, 70, 60);
-		frame.getContentPane().add(button_28);
-		
-		JButton button_29 = new JButton("E6");
-		button_29.setBounds(1200, 497, 70, 60);
-		frame.getContentPane().add(button_29);
-		
-		JButton button_30 = new JButton("F1");
-		button_30.setBounds(700, 597, 70, 60);
-		frame.getContentPane().add(button_30);
-		
-		JButton button_31 = new JButton("F2");
-		button_31.setBounds(800, 597, 70, 60);
-		frame.getContentPane().add(button_31);
-		
-		JButton button_32 = new JButton("F3");
-		button_32.setBounds(900, 597, 70, 60);
-		frame.getContentPane().add(button_32);
-		
-		JButton button_33 = new JButton("F4");
-		button_33.setBounds(1000, 597, 70, 60);
-		frame.getContentPane().add(button_33);
-		
-		JButton button_34 = new JButton("F5");
-		button_34.setBounds(1100, 597, 70, 60);
-		frame.getContentPane().add(button_34);
-		
-		JButton button_35 = new JButton("F6");
-		button_35.setBounds(1200, 597, 70, 60);
-		frame.getContentPane().add(button_35);
 		
 		JLabel label_6 = new JLabel("A");
 		label_6.setBounds(668, 119, 46, 14);
@@ -494,5 +249,29 @@ public class MainGrid {
 		label_17.setHorizontalAlignment(SwingConstants.CENTER);
 		label_17.setBounds(1200, 62, 46, 14);
 		frame.getContentPane().add(label_17);
+	}
+	
+	public JFrame getFrame() {
+		return frame;
+	}
+
+	public void setFrame(JFrame frame) {
+		this.frame = frame;
+	}
+
+	public Player getOpponent() {
+		return opponent;
+	}
+
+	public void setOpponent(Player opponent) {
+		this.opponent = opponent;
+	}
+	
+	public Player getSelf() {
+		return opponent;
+	}
+
+	public void setSelf(Player p) {
+		self = p;
 	}
 }
