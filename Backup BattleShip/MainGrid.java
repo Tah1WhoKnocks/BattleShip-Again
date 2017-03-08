@@ -107,7 +107,7 @@ public class MainGrid {
 			int x = 50;
 			for(int col = 0; col<6; col++){
 				/*if(self.getEnemies()[row][col]==2){
-					listThem[(row*6)+col]=new JButton(letters[row]+col);
+					listThem[(row*6)+col]=new JButton(letters[row]+(col+1));
 					listThem[(row*6)+col].setBounds(x,y,70,60);
 					frame.getContentPane().add(listThem[(row*6)+col]);
 				}
