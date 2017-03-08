@@ -6,6 +6,7 @@ import javax.swing.JLabel;
 import javax.swing.JSeparator;
 import javax.swing.JCheckBox;
 import javax.swing.SwingConstants;
+import javax.swing.WindowConstants;
 
 public class BoatMaker {
 public JCheckBox[][] shipshape;

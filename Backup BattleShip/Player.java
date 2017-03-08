@@ -1,4 +1,7 @@
+import java.awt.event.WindowEvent;
 import java.util.Arrays;
+
+import javax.swing.JFrame;
 
 public class Player {
 	private int turn;
@@ -108,7 +111,8 @@ public class Player {
 					}	
 				}
 			}
-			
+			boatMake.getFrame().setVisible(false);
+			boatMake.getFrame().dispose();
 		
 	}
 	
