@@ -13,19 +13,13 @@ import net.miginfocom.swing.MigLayout;
 import java.awt.EventQueue;
 import java.util.Arrays;
 
-public class ShipRunner {
+public class TextRunner {
 	public static void main(String[]args)
 	{
 
-		
-		MainWindow window = new MainWindow();
-		window.frame.setVisible(true);
-		
-					
-		
 		Scanner scan = new Scanner(System.in);
 		int winner = 0;
-		int turn = ((int)Math.random()+1 *2);
+		int turn = 1;
 		int[][] p1ships = new int[][]{ {1,1,1,1,1,1,1,1,1,1},
 			 {1,1,1,1,1,1,1,1,1,1},
 			 {1,1,1,1,1,1,1,1,1,1},
@@ -52,7 +46,7 @@ public class ShipRunner {
 		Player p2 = new Player(2, p2ships);
       
 		
-      String[] q = {"1+2=","2+2=","3+2=","4+2="};
+	  String[] q = {"1+2=","2+2=","3+2=","4+2="};
       String[] a = {"3","4","5","6"};
       Quiz addition = new Quiz(q,a);
 		
@@ -125,6 +119,8 @@ public class ShipRunner {
                turn = 1;
          }
       }
+	  
+	  scan.close();
       
    }//ends main
 }//ends class

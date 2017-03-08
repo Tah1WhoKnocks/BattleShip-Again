@@ -26,7 +26,7 @@ import javax.swing.JSplitPane;
 import javax.swing.SwingConstants;
 import java.awt.Color;
 
-public class MainWindow {
+public class MainGrid {
 
 	String answer;
 	JFrame frame;
@@ -41,7 +41,7 @@ public class MainWindow {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MainWindow window = new MainWindow();
+					MainGrid window = new MainGrid();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -53,7 +53,7 @@ public class MainWindow {
 	/**
 	 * Create the application.
 	 */
-	public MainWindow() {
+	public MainGrid() {
 		initialize();
 	}
 
