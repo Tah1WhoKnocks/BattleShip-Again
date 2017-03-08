@@ -103,27 +103,29 @@ public class MainGrid {
 		//cleaned up implication of buttons
 		//commented out section is supposed to set button text according to 
 		//getters but I couldn't get it to work.
-		for(int row = 0; row<7; row++){
+		for(int row = 0; row<6; row++){
 			int x = 50;
-			for(int col = 1; col<7; col++){
+			for(int col = 0; col<6; col++){
 				/*if(self.getEnemies()[row][col]==2){
-					listThem[row+col]=new JButton(letters[row]+col);
-					listThem[row+col].setBounds(x,y,70,60);
-					frame.getContentPane().add(listThem[row+col]);
+					listThem[(row*6)+col]=new JButton(letters[row]+col);
+					listThem[(row*6)+col].setBounds(x,y,70,60);
+					frame.getContentPane().add(listThem[(row*6)+col]);
 				}
 				else if(self.getEnemies()[row][col]==1){
-					listThem[row+col]=new JButton("Miss!");
-					listThem[row+col].setBounds(x,y,70,60);
-					frame.getContentPane().add(listThem[row+col]);
+					listThem[(row*6)+col]=new JButton("Miss!");
+					listThem[(row*6)+col].setBounds(x,y,70,60);
+					frame.getContentPane().add(listThem[(row*6)+col]);
 				}
 				else {
-					listThem[row+col]=new JButton("Hit!");
-					listThem[row+col].setBounds(x,y,70,60);
-					frame.getContentPane().add(listThem[row+col]);
+					listThem[(row*6)+col]=new JButton("Hit!");
+					listThem[(row*6)+col].setBounds(x,y,70,60);
+					frame.getContentPane().add(listThem[(row*6)+col]);
 				}*/
-				listThem[row+col]=new JButton(letters[row]+col);
-				listThem[row+col].setBounds(x,y,70,60);
-				frame.getContentPane().add(listThem[row+col]);
+				
+				listThem[(row*6)+col]=new JButton(letters[row]+(col+1));
+				listThem[(row*6)+col].setBounds(x,y,70,60);
+				frame.getContentPane().add(listThem[(row*6)+col]);
+				
 				x+=100;
 			}
 			y += 100;

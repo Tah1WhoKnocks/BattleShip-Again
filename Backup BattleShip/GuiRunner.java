@@ -20,30 +20,32 @@ public class GuiRunner {
 	   /*p1.makeBoats();
 	   p2.makeBoats();*/
 	    
-	    MainGrid player1;
-	    MainGrid player2;
+	    MainGrid player1=new MainGrid();;
+	    MainGrid player2=new MainGrid();;
 	   
-	   while(winner==0){
+	   /*while(winner==0){
 	    	if(turn==1){
-	    		player1=new MainGrid();
 	    		player1.setSelf(p1);
 	    		player1.setOpponent(p2);
 	    		player1.getFrame().setVisible(true);
 	    	}
-	    	//player1.getFrame().setVisible(false);
-			//player1.getFrame().dispose();
+	    	player1.getFrame().setVisible(false);
+			player1.getFrame().dispose();
 	    	
 	    	if(turn==2){
-	    		player2=new MainGrid();
 	    		player2.setSelf(p2);
 	    		player2.setOpponent(p1);
 	    		player2.getFrame().setVisible(true);
 	    	}
-	    	//player2.getFrame().setVisible(false);
-			//player2.getFrame().dispose();
-	    	
-    		
-	   }
+	    	player2.getFrame().setVisible(false);
+			player2.getFrame().dispose();
+	    
+	    
+	   }*/
+	    
+	    player1.setSelf(p1);
+		player1.setOpponent(p2);
+		player1.getFrame().setVisible(true);
 			
 		
 			
