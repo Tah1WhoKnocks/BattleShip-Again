@@ -20,6 +20,14 @@ public class GuiRunner {
 	    MainGrid player1=new MainGrid(p1, p2);
 	    //player1.getFrame().setVisible(true);
 	    
+	   while(3 != 4)
+	   {
+	    
 	    p1.attackGui(p1, p2);
+	    
+	    p2.attackGui(p2, p1);
+	    
+	    
+	   }
 	 }
 }

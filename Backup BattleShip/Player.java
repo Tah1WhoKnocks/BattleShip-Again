@@ -19,12 +19,12 @@ public class Player {
 	
 	public Player(int i)
 	{
-		 ships = new int[][]{ {0,1,0,1,0,1},
-			 {1,1,1,1,1,1},
-			 {1,1,1,1,1,1},
-			 {1,1,1,1,1,1},
-			 {1,1,1,1,1,1},
-			 {1,1,1,1,1,1},};
+		 ships = new int[][]{ {0,1,0,1,0,3},
+			 {1,1,1,1,1,3},
+			 {1,1,1,1,3,3},
+			 {1,1,1,1,1,3},
+			 {1,1,1,1,1,3},
+			 {1,1,1,1,3,3},};
 		 enemies = new int[][] { {0,1,2,2,2,2},
 			 {2,2,2,2,2,2},
 			 {2,2,2,2,2,2},
@@ -135,12 +135,14 @@ public class Player {
 						name = grid.getListThem()[c].getText();
 						x = convert(name.substring(0,1));
 						y = Integer.parseInt(name.substring(1,2));
+						
 					pressed = true;
 					}
 					
-					attack(o,2,2);	
+						
 				}
 			}
+			attack(o,x,y);
 			grid.getFrame().setVisible(false);
 			grid.getFrame().dispose();
 		
