@@ -45,7 +45,7 @@ public class GuiQuiz extends JDialog {
 	 * Create the dialog.
 	 */
 	public GuiQuiz() {
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 1366, 720);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);

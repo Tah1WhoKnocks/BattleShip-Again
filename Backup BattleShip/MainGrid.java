@@ -106,7 +106,7 @@ public class MainGrid {
 		lblYourShips.setBounds(1180, 14, 83, 14);
 		frame.getContentPane().add(lblYourShips);
 		
-		JLabel lblPlayer = new JLabel("Player ");
+		JLabel lblPlayer = new JLabel("Player "+self.getTurn());
 		lblPlayer.setBounds(682, 14, 46, 14);
 		frame.getContentPane().add(lblPlayer);
 		
