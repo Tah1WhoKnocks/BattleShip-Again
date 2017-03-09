@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import net.miginfocom.swing.MigLayout;
 import norm.buzzfeed;
 
@@ -62,11 +64,30 @@ public class MainGrid {
 		setSelf(new Player(1));
 		setOpponent(new Player(2));
 	}
+	
+	public MainGrid(Player p, Player o) {
+		self = p;
+		opponent = o;
+		initialize();
+		
+	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
+		
+		ActionListener listener = new ActionListener() {
+	        @Override
+	        public void actionPerformed(ActionEvent e) {
+	            if (e.getSource() instanceof JButton) {
+	                String text = ((JButton) e.getSource()).getText();
+	                JOptionPane.showMessageDialog(null, text);
+	            }
+	        }
+	    };
+		
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(51, 102, 255));
 		frame.setBounds(100, 100, 1366, 720);
@@ -103,8 +124,8 @@ public class MainGrid {
 		//cleaner implementation of buttons
 		//loop reads player.getEnemies and sets buttons accordingly
 		
-		self = new Player(1);
-		opponent = new Player(2);
+		//self = new Player(1);
+		//opponent = new Player(2);
 		
 		for(int row = 0; row<6; row++){
 			int x = 50;

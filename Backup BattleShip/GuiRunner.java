@@ -17,13 +17,16 @@ public class GuiRunner {
 	    int winner = 0;
 	    int turn = 1;
 	   
-	   /*p1.makeBoats();
-	   p2.makeBoats();*/
+	   p1.makeBoats();
+	   p2.makeBoats();
 	    
-	    MainGrid player1=new MainGrid();;
-	    MainGrid player2=new MainGrid();;
-	   
-	   /*while(winner==0){
+	    MainGrid player1=new MainGrid(p1, p2);;
+	    MainGrid player2=new MainGrid(p2, p1);;
+	    player1.getFrame().setVisible(true);
+	 //   player1.setSelf(p1);
+	//	player1.setOpponent(p2);
+	//	player1.getFrame().setVisible(true);
+	   /*//while(winner==0){
 	    	if(turn==1){
 	    		player1.setSelf(p1);
 	    		player1.setOpponent(p2);
@@ -43,9 +46,8 @@ public class GuiRunner {
 	    
 	   }*/
 	    
-	    player1.setSelf(p1);
-		player1.setOpponent(p2);
-		player1.getFrame().setVisible(true);
+	    
+	
 			
 		
 			
