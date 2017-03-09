@@ -132,7 +132,7 @@ public class Player {
 				{
 					if(grid.getListThem()[c].isSelected())
 					{
-						name = grid.getListThem()[c].getName();
+						name = grid.getListThem()[c].getText();
 						x = convert(name.substring(0,1));
 						y = Integer.parseInt(name.substring(1,2));
 					pressed = true;

@@ -17,48 +17,9 @@ public class GuiRunner {
 	    int winner = 0;
 	    int turn = 1;
 	   
-	  // p1.makeBoats();
-	  // p2.makeBoats();
-	    
 	    MainGrid player1=new MainGrid(p1, p2);
-	    //System.out.println(player1.getListThem());
-	  //  MainGrid player2=new MainGrid(p2, p1);
-	   player1.getFrame().setVisible(true);
+	    //player1.getFrame().setVisible(true);
 	    
-	  // p1.attackGui(p1,p2);
-	  
-	  
-	   
-	   //System.out.println(player1.getListThem());
-	 //   player1.setSelf(p1);
-	//	player1.setOpponent(p2);
-	//	player1.getFrame().setVisible(true);
-	   /*//while(winner==0){
-	    	if(turn==1){
-	    		player1.setSelf(p1);
-	    		player1.setOpponent(p2);
-	    		player1.getFrame().setVisible(true);
-	    	}
-	    	player1.getFrame().setVisible(false);
-			player1.getFrame().dispose();
-	    	
-	    	if(turn==2){
-	    		player2.setSelf(p2);
-	    		player2.setOpponent(p1);
-	    		player2.getFrame().setVisible(true);
-	    	}
-	    	player2.getFrame().setVisible(false);
-			player2.getFrame().dispose();
-	    
-	    
-	   }*/
-	    
-	    
-	
-			
-		
-			
-		
-	}
-	
+	    p1.attackGui(p1, p2);
+	 }
 }
