@@ -112,7 +112,7 @@ public class MainGrid {
 		
 		String[] letters = {"A","B","C","D","E","F","G","H","I","J"};
 		
-		 listThem = new JToggleButton[64];
+		 listThem = new JToggleButton[36];
 		int y = 100;
 		
 		//cleaner implementation of buttons

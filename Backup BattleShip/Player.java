@@ -125,7 +125,7 @@ public class Player {
 		MainGrid grid = new MainGrid(p,o);
 		grid.initialize();
 		grid.getFrame().setVisible(true);
-		System.out.println(grid.getListThem());
+		
 			boolean pressed = false;
 			while(pressed == false){
 				for(int c = 0;c < grid.getListThem().length;c++)
@@ -138,7 +138,7 @@ public class Player {
 					pressed = true;
 					}
 					
-					attack(o,x,y);	
+					attack(o,2,2);	
 				}
 			}
 			grid.getFrame().setVisible(false);
