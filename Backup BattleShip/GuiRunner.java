@@ -31,6 +31,7 @@ public class GuiRunner {
 		    p1.attackGui(p1, p2);
 		    if(p1.checkWinner(p2)){
 		    	winner=1;
+		    	JOptionPane.showMessageDialog(null,"Player 1 wins!!!");
 		    }
 		 }
 		}
@@ -40,6 +41,7 @@ public class GuiRunner {
 	    	p2.attackGui(p2, p1);
 	    	if(p2.checkWinner(p1)){
 	    		winner=2;
+	    		JOptionPane.showMessageDialog(null,"Player 2 wins!!!");
 	    	}
 	     }
 		}
