@@ -165,6 +165,7 @@ public class MainGrid {
 				if(self.getShips()[row][col]>1){
 					listMe[(row*6)+col]=new JButton("Ship");
 					listMe[(row*6)+col].setBounds(x,y1,70,60);
+					listMe[(row*6)+col].setBackground(Color.gray);
 					frame.getContentPane().add(listMe[(row*6)+col]);
 				}
 				else if(self.getShips()[row][col]==1){

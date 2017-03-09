@@ -2,6 +2,7 @@ import java.awt.event.WindowEvent;
 import java.util.Arrays;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class Player {
 	private int turn;
@@ -92,9 +93,9 @@ public class Player {
 	}
    
 	//Make boats!
-	public void makeBoats()
+	public void makeBoats(int i)
 	{
-		 BoatMaker boatMake = new BoatMaker();
+		 BoatMaker boatMake = new BoatMaker(i);
 			boatMake.initialize();
 			boatMake.getFrame().setVisible(true);
 			int shiptotal = 0;
@@ -153,8 +154,10 @@ public class Player {
 		if(ships[x][y]>1)
 		{
 			ships[x][y] = 0;
+			JOptionPane.showMessageDialog(null,"Hit!");
 			return true;
 		}else{
+			JOptionPane.showMessageDialog(null,"Miss!");
 			return false;
 		}
 	}

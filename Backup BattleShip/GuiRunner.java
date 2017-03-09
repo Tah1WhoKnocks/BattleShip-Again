@@ -16,26 +16,29 @@ public class GuiRunner {
 	    int winner = 0;
 	    int turn = 1;
 	    
-	    p1.makeBoats();
-		p2.makeBoats();
-		
-		GuiQuiz quizlet = new GuiQuiz();
+	    GuiQuiz quizlet = new GuiQuiz();
 		quizlet.createQuestions();
 		//quizlet.askQuestion();
 	    
+	    p1.makeBoats(1);
+		p2.makeBoats(2);
+		
+		
+	    
 	   while(winner == 0)
 	   {
-	    
+		JOptionPane.showMessageDialog(null,"Player 1");
 		if(quizlet.askQuestion()){
 		if(winner==0){
 		    p1.attackGui(p1, p2);
 		    if(p1.checkWinner(p2)){
 		    	winner=1;
 		    	JOptionPane.showMessageDialog(null,"Player 1 wins!!!");
+		    	break;
 		    }
 		 }
 		}
-	    
+		JOptionPane.showMessageDialog(null,"Player 2");
 		if(quizlet.askQuestion()){
 	    if(winner==0){
 	    	p2.attackGui(p2, p1);

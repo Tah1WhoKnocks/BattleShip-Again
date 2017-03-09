@@ -45,7 +45,7 @@ public class GuiQuiz extends JDialog {
 	 * Create the dialog.
 	 */
 	public GuiQuiz() {
-		setBounds(100, 100, 1366, 720);
+		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -76,14 +76,17 @@ public class GuiQuiz extends JDialog {
 		
 		public boolean askQuestion()
 		{
-			currentQuestion = ((int)Math.random()*currentQuestion);
+			
+			currentQuestion = (int)(Math.random() * questionCounter);
 			if(JOptionPane.showInputDialog(questions[0][currentQuestion]).equals(questions[1][currentQuestion]))
 			{
-				System.out.println("true");
+				
 				return true;
 			}else{
 				return false;
 			}
+			
+			
 		}
 		
 }

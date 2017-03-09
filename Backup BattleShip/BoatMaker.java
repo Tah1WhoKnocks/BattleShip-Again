@@ -28,7 +28,7 @@ public JCheckBox[][] shipshape;
 		});
 		//tj b cool
 		
-		
+
 		
 		
 		
@@ -38,8 +38,8 @@ public JCheckBox[][] shipshape;
 	 * Create the application.
 	 */
 	private int gUIPlayerNumber;
-	public BoatMaker() {
-		
+	public BoatMaker(int i) {
+		gUIPlayerNumber = i;
 		initialize();
 	}
 
@@ -64,7 +64,7 @@ public JCheckBox[][] shipshape;
 		lblPlayer.setBounds(34, 11, 46, 14);
 		getFrame().getContentPane().add(lblPlayer);
 		
-		JLabel lblNewLabel = new JLabel(" "+ gUIPlayerNumber);
+		JLabel lblNewLabel = new JLabel("  "+ gUIPlayerNumber);
 		lblNewLabel.setBounds(67, 11, 46, 14);
 		getFrame().getContentPane().add(lblNewLabel);
 		
