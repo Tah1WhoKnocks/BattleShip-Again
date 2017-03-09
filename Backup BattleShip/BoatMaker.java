@@ -26,6 +26,7 @@ public JCheckBox[][] shipshape;
 				}
 			}
 		});
+		//tj b cool
 		
 		
 		
