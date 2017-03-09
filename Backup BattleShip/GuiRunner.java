@@ -20,12 +20,18 @@ public class GuiRunner {
 	    MainGrid player1=new MainGrid(p1, p2);
 	    //player1.getFrame().setVisible(true);
 	    
-	   while(3 != 4)
+	   while(winner == 0)
 	   {
 	    
 	    p1.attackGui(p1, p2);
+	    if(p1.checkWinner(p2)){
+	    	winner=1;
+	    }
 	    
 	    p2.attackGui(p2, p1);
+	    if(p2.checkWinner(p1)){
+	    	winner=2;
+	    }
 	    
 	    
 	   }
