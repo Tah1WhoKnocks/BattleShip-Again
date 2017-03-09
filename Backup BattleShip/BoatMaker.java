@@ -278,8 +278,8 @@ public JCheckBox[][] shipshape;
 				{chckbxB, chckbxB_1, chckbxB_2, chckbxB_3, chckbxB_4, chckbxB_5},
 				{chckbxC, chckbxC_1, chckbxC_2, chckbxC_3, chckbxC_4, chckbxC_5},
 				{chckbxD, chckbxD_1, chckbxD_2, chckbxD_3, chckbxD_4, chckbxD_5},
-				{chckbxA, chckbxE_1, chckbxE_2, chckbxE_3, chckbxE_4, chckbxE_5},
-				{chckbxA, chckbxF_1, chckbxF_2, chckbxF_3, chckbxF_4, chckbxF_5}};
+				{chckbxE, chckbxE_1, chckbxE_2, chckbxE_3, chckbxE_4, chckbxE_5},
+				{chckbxF, chckbxF_1, chckbxF_2, chckbxF_3, chckbxF_4, chckbxF_5}};
 		
 		
 		

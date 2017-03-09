@@ -146,9 +146,6 @@ public class MainGrid {
 					frame.getContentPane().add(listThem[(row*6)+col]);
 				}
 				
-				/*listThem[(row*6)+col]=new JButton(letters[row]+(col+1));
-				listThem[(row*6)+col].setBounds(x,y,70,60);
-				frame.getContentPane().add(listThem[(row*6)+col]);*/
 				
 				x+=100;
 			}
@@ -157,12 +154,37 @@ public class MainGrid {
 		
 		JButton[] listMe = new JButton[64];
 		int y1 = 100;
-		for(int row = 0; row<7; row++){
-			int x = 710;
-			for(int col = 1; col<7; col++){
+		
+			
+			
+			/*for(int col = 1; col<7; col++){
 				listMe[row+col]=new JButton(letters[row]+col);
 				listMe[row+col].setBounds(x,y1,70,60);
 				frame.getContentPane().add(listMe[row+col]);
+				*/
+			
+				
+		for(int row = 0; row<6; row++){
+			int x = 710;
+			for(int col = 0; col<6; col++){
+				if(self.getShips()[row][col]>1){
+					listMe[(row*6)+col]=new JButton("Ship");
+					listMe[(row*6)+col].setBounds(x,y1,70,60);
+					frame.getContentPane().add(listMe[(row*6)+col]);
+				}
+				else if(self.getShips()[row][col]==1){
+					listMe[(row*6)+col]=new JButton("Empty");
+					listMe[(row*6)+col].setBounds(x,y1,70,60);
+					frame.getContentPane().add(listMe[(row*6)+col]);
+				}
+				else {
+					listMe[(row*6)+col]=new JButton("Hit!");
+					listMe[(row*6)+col].setBounds(x,y1,70,60);
+					listMe[(row*6)+col].setBackground(Color.red);
+					frame.getContentPane().add(listMe[(row*6)+col]);
+				}
+				
+				
 				x+=100;
 			}
 			y1 += 100;

@@ -19,7 +19,7 @@ public class Player {
 	
 	public Player(int i)
 	{
-		 ships = new int[][]{ {1,1,1,1,1,1},
+		 ships = new int[][]{ {0,1,0,1,0,1},
 			 {1,1,1,1,1,1},
 			 {1,1,1,1,1,1},
 			 {1,1,1,1,1,1},
@@ -98,7 +98,7 @@ public class Player {
 			boatMake.initialize();
 			boatMake.getFrame().setVisible(true);
 			int shiptotal = 0;
-			while(shiptotal<10){
+			while(shiptotal<7){
 				for(int c = 0;c <boatMake.getShipShape().length;c++)
 				{
 					for(int b = 0;b<boatMake.getShipShape()[c].length;b++)

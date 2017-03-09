@@ -23,6 +23,9 @@ public class GuiRunner {
 	    MainGrid player1=new MainGrid(p1, p2);;
 	    MainGrid player2=new MainGrid(p2, p1);;
 	    player1.getFrame().setVisible(true);
+	    
+	    
+	    
 	 //   player1.setSelf(p1);
 	//	player1.setOpponent(p2);
 	//	player1.getFrame().setVisible(true);
