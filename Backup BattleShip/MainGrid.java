@@ -24,6 +24,8 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.ButtonGroup;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
+import javax.swing.JToggleButton;
+
 import java.awt.event.InputMethodListener;
 import java.awt.event.InputMethodEvent;
 import javax.swing.JSplitPane;
@@ -37,6 +39,7 @@ public class MainGrid {
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private Player self;
 	private Player opponent;
+	public JToggleButton[] listThem;
 	
 
 	/**
@@ -75,18 +78,9 @@ public class MainGrid {
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	public void initialize() {
 		
 		
-		ActionListener listener = new ActionListener() {
-	        @Override
-	        public void actionPerformed(ActionEvent e) {
-	            if (e.getSource() instanceof JButton) {
-	                String text = ((JButton) e.getSource()).getText();
-	                JOptionPane.showMessageDialog(null, text);
-	            }
-	        }
-	    };
 		
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(51, 102, 255));
@@ -118,7 +112,7 @@ public class MainGrid {
 		
 		String[] letters = {"A","B","C","D","E","F","G","H","I","J"};
 		
-		JButton[] listThem = new JButton[64];
+		 listThem = new JToggleButton[64];
 		int y = 100;
 		
 		//cleaner implementation of buttons
@@ -131,17 +125,17 @@ public class MainGrid {
 			int x = 50;
 			for(int col = 0; col<6; col++){
 				if(self.getEnemies()[row][col]==2){
-					listThem[(row*6)+col]=new JButton(letters[row]+(col+1));
+					listThem[(row*6)+col]=new JToggleButton(letters[row]+(col+1));
 					listThem[(row*6)+col].setBounds(x,y,70,60);
 					frame.getContentPane().add(listThem[(row*6)+col]);
 				}
 				else if(self.getEnemies()[row][col]==1){
-					listThem[(row*6)+col]=new JButton("Miss!");
+					listThem[(row*6)+col]=new JToggleButton("Miss!");
 					listThem[(row*6)+col].setBounds(x,y,70,60);
 					frame.getContentPane().add(listThem[(row*6)+col]);
 				}
 				else {
-					listThem[(row*6)+col]=new JButton("Hit!");
+					listThem[(row*6)+col]=new JToggleButton("Hit!");
 					listThem[(row*6)+col].setBounds(x,y,70,60);
 					listThem[(row*6)+col].setBackground(Color.green);
 					frame.getContentPane().add(listThem[(row*6)+col]);
@@ -324,6 +318,10 @@ public class MainGrid {
 		self = p;
 	}
 	
-	
+		
+	public JToggleButton[] getListThem()
+	{
+		return listThem;
+	}
 	
 }

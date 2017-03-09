@@ -115,7 +115,36 @@ public class Player {
 			boatMake.getFrame().dispose();
 		
 	}
-	
+	//makes the window does the stuff to attack
+	public void attackGui(Player p, Player o)
+	{
+		int x = 0;
+		int y = 0;
+		String name;
+		
+		MainGrid grid = new MainGrid(p,o);
+		grid.initialize();
+		grid.getFrame().setVisible(true);
+		System.out.println(grid.getListThem());
+			boolean pressed = false;
+			while(pressed == false){
+				for(int c = 0;c < grid.getListThem().length;c++)
+				{
+					if(grid.getListThem()[c].isSelected())
+					{
+						name = grid.getListThem()[c].getName();
+						x = convert(name.substring(0,1));
+						y = Integer.parseInt(name.substring(1,2));
+					pressed = true;
+					}
+					
+					attack(o,x,y);	
+				}
+			}
+			grid.getFrame().setVisible(false);
+			grid.getFrame().dispose();
+		
+	}
    public boolean recieveAttack(int x, int y)
 	{
       //y-=1;
@@ -142,16 +171,8 @@ public class Player {
 				row = 3;
 			}else if(s.toLowerCase().equals("e")){
 				row = 4;
-			}else if(s.toLowerCase().equals("f")){
-				row = 5;
-			}else if(s.toLowerCase().equals("g")){
-				row = 6;
-			}else if(s.toLowerCase().equals("h")){
-				row = 7;
-			}else if(s.toLowerCase().equals("i")){
-				row = 8;
 			}else{
-				row = 9;
+				row = 5;
 			}
 				
 		return row;
